@@ -1,0 +1,52 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+<br>
+<br>
+<h3 class="display-3 lh-3 mb-3" style="font-family: 'Fredoka One', sans-serif;">Nuestros Planes</h3>    
+
+<h3 class="text-center mt-2">Buscar Plan</h3>
+<!-- Formulario de búsqueda -->
+<div class="d-flex flex-column align-items-center mb-2">
+    <form action="" method="GET">
+        <input type="text" name="q" placeholder="Buscar..." required>
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Costo</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for plan in planes %}
+        <tr>
+            <td>{{ plan.nombre }}</td>
+            <td>{{ plan.tipo }}</td>
+            <td>{{ plan.costo }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+    <li class="nav-item">
+        <a class="nav-link btn btn-primary rounded-pill text-white" href="{% url 'formularioplanes' %}" style="padding: 0; font-size: inherit; line-height: inherit; display: inline;">
+            <i class="bi-chat-text-fill me-1"></i>
+            Agregar plan
+        </a>
+    </li>
+</ul>
+
+
+<br>
+<br>
+<br>
+{% endblock %}
+
