@@ -47,8 +47,8 @@ Accede a la sección de Planes para ver todos los planes disponibles en el gimna
 Puedes agregar nuevos planes a través del botón de ` "Agregar plan` , el cual abrirá un formulario para completar con los datos del nuevo plan (nombre, tipo, costo).
 Los planes deben mostrarse en una tabla donde cada fila representa un plan existente con sus detalles.
 
-#### 2. Profesores:
-En la sección de Profesores, podrás ver una lista de los profesores del gimnasio.
+#### 2. Entrenadores:
+En la sección de Entrenadores, podrás ver una lista de los entrenadores del gimnasio.
 Similar a los planes, podrás agregar nuevos profesores usando un formulario que pide su nombre, especialidad, y contacto.
 #### 3. Alumnos:
 En la sección de Alumnos, podrás ver la lista de todos los alumnos registrados.
