@@ -8,10 +8,10 @@ GlowUp Gym es un sitio web de un gimnasio ficticio,  donde se pueden gestionar p
 - Bootstrap (para el diseño de la interfaz)
 - Base de datos (SQLite por defecto)
 
->** Super usuario:**
+>**Super usuario:**
 >Usuario: franco     |     Contraseña: pi31415926
-
->** Usuario regular:**
+>
+>**Usuario regular**:
 >Usuario: Estanislao     |     Contraseña: pi31415926
 
 ### Instalación
