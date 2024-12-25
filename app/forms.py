@@ -1,4 +1,6 @@
 from django import forms
+from django.contrib.auth.models import User
+from .models import Perfil
 
 class PlanesFormulario(forms.Form):
     nombre = forms.CharField(max_length=50)  
@@ -38,3 +40,13 @@ class AlumnoFormulario(forms.Form):
         ('otro', 'Otro'),
     ]
     plan = forms.ChoiceField(choices=PLAN_VIGENTE_CHOICES, initial='otro', widget=forms.Select(attrs={'class': 'form-control'}))
+
+class Editar_usuario(forms.ModelForm):
+    class Meta:
+        model=User
+        fields=("first_name","last_name","email")
+
+class Perfilforms(forms.ModelForm):
+    class Meta:
+        model=Perfil
+        fields=["foto"]

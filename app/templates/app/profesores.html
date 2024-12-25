@@ -19,8 +19,11 @@
     <thead class="table-dark">
         <tr>
             <th>Nombre</th>
-            <th>apellido</th>
-            <th>contacto</th>
+            <th>Apellido</th>
+            <th>Contacto</th>
+            <th>Acciones</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -29,11 +32,18 @@
             <td>{{ profes.nombre }}</td>
             <td>{{ profes.apellido }}</td>
             <td>{{ profes.email }}</td>
+
+                {% if user.is_superuser %}
+                <td> <a class="btn btn-danger" href="{% url 'eliminarprofesor' profes.id %}">Eliminar</a><td>
+                <td> <a class="btn btn-warning" href="{% url 'editarprofesor' profes.id %}">Editar</a><td>
+                {% else %}
+                <td><p>Se requiere permisos de edición</p><td>
+                {% endif %}
         </tr>
         {% endfor %}
     </tbody>
 </table>
-
+{% if user.is_superuser %}
 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
     <li class="nav-item">
         <a class="nav-link btn btn-primary rounded-pill text-white" href="{% url 'formularioprofesores' %}" style="padding: 0; font-size: inherit; line-height: inherit; display: inline;">
@@ -42,5 +52,7 @@
         </a>
     </li>
 </ul>
-
+{% else %}
+<td><p>Se requiere permisos de edición</p><td>
+{% endif %}
 {% endblock %}        

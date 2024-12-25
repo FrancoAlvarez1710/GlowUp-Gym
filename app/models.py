@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Plan(models.Model):
     nombre = models.CharField(max_length=50) 
@@ -62,3 +63,7 @@ class Ejercicio(models.Model):
     
     def __str__(self):
         return self.nombre
+
+class Perfil(models.Model):
+    usuario=models.OneToOneField(User, on_delete=models.CASCADE)
+    foto=models.ImageField(upload_to="profile_picture/", null=True,blank=True)

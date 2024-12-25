@@ -1,0 +1,24 @@
+
+{% extends 'app/base.html' %}
+{% load static %}
+{% block contenido%}
+
+<h1>Agregar planes:</h1>
+
+<div class="container my-4">
+  <div class="row justify-content-center">
+      <div class="col-4">
+          <form action="" method="POST">
+              {% csrf_token %}
+
+              {{ forms.as_p }}
+
+              <button type="submit" class="btn btn-primary">Editar plan</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+</div>
+
+{% endblock %}

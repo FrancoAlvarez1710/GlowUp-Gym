@@ -35,17 +35,45 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="{% url 'acerca' %}">Acerca de nosotros</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3" href="{% url 'planes' %}">Planes</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="{% url 'profesores' %}">Profesores</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="{% url 'profesores' %}">Entrenadores</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3" href="{% url 'alumnos' %}">Alumnos</a></li>
-
                     </ul>
-                    <a class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" href="{% url 'formularioalumnos' %}">
+                    
+                    {% if user.is_authenticated %}
+
+                    <div class="btn-group me-3" role="group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          Mi perfil
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{% url 'mostrar-perfil' %}">Ver perfil</a></li>
+                          <li><a class="dropdown-item" href="{% url 'editar-perfil' %}">Editar perfil</a></li>
+                          <li><a class="dropdown-item" href="{% url 'cambiar-contraseña' %}">Cambiar contraseña</a></li>
+                        </ul>
+                      </div>
+                      
+                      <a class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0 ms-3" href="{% url 'logout' %}">
+                        <span class="d-flex align-items-center">
+                          <i class="bi-chat-text-fill me-2"></i>
+                          <span class="small">Cerrar sesión</span>
+                        </span>
+                      </a>
+                      
+                    {% else %}
+                    <a class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" href="{% url 'login' %}">
+                        <span class="d-flex align-items-center">
+                            <i class="bi-chat-text-fill me-2"></i>
+                            <span class="small">Inicio de sesión</span>
+                    </ul>
+                    <a class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" href="{% url 'registro' %}">
                         <span class="d-flex align-items-center">
                             <i class="bi-chat-text-fill me-2"></i>
                             <span class="small">Inscribirme</span>
                         </span>
-                    </a>                    
+                    </a>                
+                    {% endif %}
                 </div>
             </div>
         </nav>

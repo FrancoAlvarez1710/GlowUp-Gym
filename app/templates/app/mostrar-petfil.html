@@ -1,0 +1,16 @@
+    {% extends 'app/base.html' %}
+    {% load static %}
+    {% block contenido %}
+    <br>
+    <br>
+    <br>
+    <h3 class="display-3 lh-3 mb-3 text-center" style="font-family: 'Fredoka One', sans-serif;">Mi perfil</h3>    
+    <p class="text-center" style="font-family: 'Fredoka One', sans-serif; font-size: 26px; color: rgb(150, 21, 167);">Perfil de {{user.username}}</p>
+    <div class= "container" 
+    <p> Nombre:{{ user.first_name | default:"Ingrese sus datos"}} </p>
+    <p>Apellido:{{ user.last_name | default:"Ingrese sus datos"}} </p>
+    <p>Correo:{{ user.email| default:"Ingrese sus datos"}} </p>
+    <img src="{{user.perfil.foto.url}}" alt="">
+    </div>
+
+    {% endblock %}
