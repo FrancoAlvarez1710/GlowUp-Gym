@@ -7,12 +7,16 @@ GlowUp Gym es un sitio web de un gimnasio ficticio,  donde se pueden gestionar p
 - Django 5.x
 - Bootstrap (para el diseño de la interfaz)
 - Base de datos (SQLite por defecto)
-
+- 
+#### Usuarios
 >**Super usuario:**
 >Usuario: franco     |     Contraseña: pi31415926
 >
 >**Usuario regular**:
 >Usuario: Estanislao     |     Contraseña: pi31415926
+
+#### Video explicativo:
+[https://youtu.be/tJjVD2QP1QM]
 
 ### Instalación
 
