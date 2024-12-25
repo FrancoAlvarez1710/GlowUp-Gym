@@ -57,3 +57,6 @@ Puedes agregar nuevos alumnos con sus detalles, incluyendo el nombre, apellido, 
 
 #### Formularios de inscripción:
 Todos los campos cuentan con sus respectivos botones para agregar datos a los campos, al igual que formularios de búsqueda. 
+
+#### Interacciones de usuarios con la platafomra:
+Se cuenta con un apartado de registro de usuarios, como así también de inicio y cierre de sesión. Además de la posibilidad de ver el pefil de usuario y la edición del mismo
