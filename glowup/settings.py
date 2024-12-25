@@ -74,10 +74,22 @@ WSGI_APPLICATION = 'glowup.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'FrancoAlvarez171$glowupbd',
+        'USER': 'FrancoAlvarez171',
+        'PASSWORD': 'pi31415926',
+        'HOST': 'FrancoAlvarez1710.mysql.pythonanywhere-services.com',
+        'PORT': '3366',
+
     }
 }
 
@@ -119,6 +131,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/"media"
+STATIC_ROOT=BASE_DIR/'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
